@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "full_name": "Your Name",
+  "employment_history": [
+    {
+      "title": "Job Title",
+      "company": "Company Name",
+      "start": "YYYY-MM",
+      "end": "YYYY-MM or Present",
+      "scope": "One sentence about the role (optional)"
+    }
+  ],
+  "notes": "Add more roles in the same format. Keep the most recent job first."
+}
