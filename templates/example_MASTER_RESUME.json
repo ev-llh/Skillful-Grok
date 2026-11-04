@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "full_name": "Alex Example",
+  "employment_history": [
+    {
+      "title": "Senior Operations Manager",
+      "company": "Example Corp",
+      "start": "2023-06",
+      "end": "Present",
+      "scope": "Led process improvement and team coordination for a mid-size operations group."
+    },
+    {
+      "title": "Operations Analyst",
+      "company": "Sample Ltd",
+      "start": "2020-01",
+      "end": "2023-05",
+      "scope": "Analysed workflows and supported daily settlement activities."
+    },
+    {
+      "title": "Junior Associate",
+      "company": "StartUp Inc",
+      "start": "2018-07",
+      "end": "2019-12",
+      "scope": "Assisted with data entry and customer support tasks."
+    }
+  ]
+}
