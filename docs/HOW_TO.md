@@ -1,59 +1,93 @@
-# How to use skills (detailed guide)
+# How to use a skill
 
 This guide is for people who are not technical.
 
-## What is a skill?
+A skill is a folder with a file named `SKILL.md`. The AI reads the file and follows the steps.
 
-A skill is a text file named `SKILL.md`.
+The examples use the skill `cv_employment_completeness`. Use the same steps for other skills. Change the folder name.
 
-The AI reads the file and follows the instructions inside it.
+## Way A: Ask Grok or Grok Bot to fetch the skill
 
-## Get a skill
+1. Open Grok or Grok Bot.
+2. Copy this sentence: `Read the skill from https://github.com/ev-llh/Skillful-Grok/tree/main/skills/cv_employment_completeness`
+3. Paste the sentence into the chat.
+4. Send the message.
+5. Wait for the AI to confirm that it read the skill.
+6. Say: "Use this skill."
 
-### Method 1 — Tell the AI the link (recommended)
+This way also works in other AI tools that can read web pages.
 
-Copy this sentence and paste it to your AI:
-
-Read the skill from https://github.com/ev-llh/Skillful-Grok/tree/main/skills/cv_employment_completeness
-
-The AI will download and use the skill.
-
-### Method 2 — Download the files yourself
+## Way B: Download the ZIP from GitHub
 
 1. Open https://github.com/ev-llh/Skillful-Grok in your browser.
-2. Click the green button that says **Code**.
+2. Click the green **Code** button.
 3. Click **Download ZIP**.
-4. Open the downloaded file.
+4. Open the downloaded file to unzip it.
 5. Find the folder `skills/cv_employment_completeness`.
-6. Give that folder to your AI tool, or copy the text from `SKILL.md` into the AI instructions.
+6. Give that folder to your AI tool. Use Way C for Claude Code or Codex.
+7. For other tools, copy the text of `SKILL.md` into the AI instructions.
 
-## Where to put the skill
+## Way C: Put the folder in Claude Code or Codex
 
-| Tool | What to do |
-|------|------------|
-| Grok or Grok Bot | Paste the GitHub link. Say "use this skill". |
-| Claude Code | Put the skill folder in the skills directory, or add the SKILL.md text to the project instructions. |
-| Codex | Put the skill folder where Codex looks for custom skills, or paste the SKILL.md content into the system prompt. |
+Keep the folder name the same as the skill name. The folder holds `SKILL.md`.
+
+### Claude Code
+
+Personal skills work in all your projects.
+
+1. Do Way B to get the folder.
+2. Create the folder `~/.claude/skills/` if it does not exist.
+3. Copy the skill folder into it. The result is `~/.claude/skills/cv_employment_completeness/SKILL.md`.
+4. Start Claude Code.
+5. Type `/cv_employment_completeness`, or ask for a CV.
+
+Project skills work in one project only.
+
+1. Open your project folder.
+2. Create the folder `.claude/skills/` if it does not exist.
+3. Copy the skill folder into it. The result is `.claude/skills/cv_employment_completeness/SKILL.md`.
+
+Source: Anthropic, "Extend Claude with skills": https://code.claude.com/docs/en/skills
+
+### OpenAI Codex
+
+Codex uses the folder `.agents/skills`, not `.codex/skills`.
+
+User skills work in all your repos.
+
+1. Do Way B to get the folder.
+2. Create the folder `~/.agents/skills/` if it does not exist.
+3. Copy the skill folder into it. The result is `~/.agents/skills/cv_employment_completeness/SKILL.md`.
+4. Start Codex.
+5. Type `$cv_employment_completeness`, or run `/skills`.
+
+Repo skills work in one repo only.
+
+1. Open your repo folder.
+2. Create the folder `.agents/skills/` at the repo root if it does not exist.
+3. Copy the skill folder into it. The result is `.agents/skills/cv_employment_completeness/SKILL.md`.
+4. Restart Codex if the skill does not show.
+
+Source: OpenAI, "Build skills" (Codex): https://developers.openai.com/codex/skills
 
 ## First-time Master Resume setup (1 minute)
 
-1. Tell the AI: "I do not have a Master Resume. Guide me."
-2. Answer these questions when the AI asks them:
-   - Your name (or initials)
-   - Each job: company, title, start date, end date
-   - Confirm the list is complete
-3. Say "Yes" when the AI shows the list.
-4. The AI saves `MASTER_RESUME.json` for you.
+1. Say: "I do not have a Master Resume. Guide me."
+2. Answer the questions. There are 4 or fewer.
+3. Check the list that the AI shows.
+4. Type "Yes" if it is correct.
+5. The AI saves `MASTER_RESUME.json`.
+
+To see the file format, open [templates/example_MASTER_RESUME.json](../templates/example_MASTER_RESUME.json). All data in it is fake.
 
 ## Everyday use
 
-1. Make sure the AI can read the skill and your Master Resume.
-2. Say: "Create a CV for [job title] at [company]. Use the cv_employment_completeness skill."
-3. The AI checks the full history before it shows the CV.
-4. If a role is missing, the AI fixes it first.
+1. Say: "Create a CV for [job title] at [company]. Use the cv_employment_completeness skill."
+2. The AI checks the full job history.
+3. The AI shows the CV only after all checks pass.
 
-## Update your Master Resume later
+## Update your Master Resume
 
-Tell the AI: "Update my Master Resume. I have a new job."
-
-Answer the short questions. Confirm. Done.
+1. Say: "Update my Master Resume. I have a new job."
+2. Answer the questions.
+3. Type "Yes" to confirm.
