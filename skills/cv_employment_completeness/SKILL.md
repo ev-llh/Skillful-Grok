@@ -7,7 +7,7 @@ lifecycle: active
 
 # CV Employment Completeness
 
-You must use this skill every time before you show or save a CV.
+Use this skill each time before you show or save a CV.
 
 Fail closed. Do not show the CV if any check fails.
 
@@ -19,40 +19,37 @@ It uses only facts from the user's Master Resume.
 
 It stops you from inventing jobs, dates, titles, or numbers.
 
-## Required setup (first time only)
+## First-time setup
 
-The user must have a Master Resume file.
+Do this only if the user has no Master Resume.
 
-File name: `MASTER_RESUME.json` or `MASTER_RESUME.docx`.
+The Master Resume file is `MASTER_RESUME.json`. A `MASTER_RESUME.docx` file also works.
 
-If the user does not have this file, you must guide them.
+Keep the setup to 1 minute or less. Ask at most 4 short questions. Ask one question at a time.
 
-### Guide the user from zero (complete in under 1 minute)
+1. "What name goes on your CV? Initials are fine."
+2. "List each job, newest first: job title, company, start month and year, end month and year or 'Present'."
+3. "Do you want to add other roles, contracts, or gaps?"
+4. "Is this the full list, from your first job to today?"
 
-Ask these questions one by one. Keep answers short.
+Then do these steps:
 
-1. "What is your full name? (You can use initials if you prefer.)"
-2. "List every job from the most recent to the oldest. For each job, give: company name, job title, start month and year, end month and year (or 'Present')."
-3. "Are there any other roles, contracts, or gaps you want on the CV?"
-4. "Confirm: Is this the complete list from your first job to today?"
+1. Create `MASTER_RESUME.json`. Use the format in `templates/MASTER_RESUME_TEMPLATE.json`.
+2. Show the list to the user.
+3. Ask: "Is this list correct? Yes or No."
+4. If the user says No, fix the list and ask again.
+5. Continue only after the user says Yes.
+6. Save the file. Tell the user the file name and location.
 
-After the user answers:
+Do not add facts that the user did not give. For a sample file, see `templates/example_MASTER_RESUME.json`. All data in it is fake.
 
-- Create `MASTER_RESUME.json` with the data.
-- Show the list back to the user.
-- Ask: "Is this list correct? Yes or No."
-
-Only continue after the user says Yes.
-
-Store the file where the user can find it. Tell the user the file name and location.
-
-## Checklist (all must pass)
+## Checklist (all items pass)
 
 1. Full history present — Every role from the Master Resume appears on the CV. No company is missing.
 2. Dates match — Start and end dates match the Master Resume.
 3. No invented facts — Every title, company, date, and number comes only from the Master Resume.
 4. Continuous career — A reader can see the full career from the first job to today.
-5. No truncated CV — The CV must not show only recent years if the Master Resume has older roles.
+5. No truncated CV — The CV does not show only recent years if the Master Resume has older roles.
 
 ## Procedure
 
