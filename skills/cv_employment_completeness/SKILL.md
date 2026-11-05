@@ -25,7 +25,7 @@ Do this only if the user has no Master Resume.
 
 The Master Resume file is `MASTER_RESUME.json`. A `MASTER_RESUME.docx` file also works.
 
-Keep the setup to 1 minute or less. Ask at most 4 short questions. Ask one question at a time.
+Keep the setup to 1 minute or less. Ask at most 5 short questions. Ask one question at a time.
 
 1. "What name goes on your CV? Initials are fine."
 2. "List each job, newest first: job title, company, start month and year, end month and year or 'Present'."

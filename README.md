@@ -18,7 +18,7 @@ You do not need technical skills.
 2. Copy this sentence: `Read the skill from https://github.com/ev-llh/Skillful-Grok/tree/main/skills/cv_employment_completeness`
 3. Paste the sentence into the chat.
 4. Send the message.
-5. Answer the setup questions. There are 4 or fewer.
+5. Answer the setup questions. There are 5 or fewer.
 6. Check the Master Resume that the AI shows you.
 7. Type "Yes" if it is correct.
 8. Ask the AI for a CV. Example: "Create a CV for an Operations Manager job."

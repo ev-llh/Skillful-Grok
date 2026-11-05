@@ -73,7 +73,7 @@ Source: OpenAI, "Build skills" (Codex): https://developers.openai.com/codex/skil
 ## First-time Master Resume setup (1 minute)
 
 1. Say: "I do not have a Master Resume. Guide me."
-2. Answer the questions. There are 4 or fewer.
+2. Answer the questions. There are 5 or fewer.
 3. Check the list that the AI shows.
 4. Type "Yes" if it is correct.
 5. The AI saves `MASTER_RESUME.json`.

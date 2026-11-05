@@ -16,7 +16,7 @@ One sentence that says what this skill does.
 
 Delete this section if the skill needs no user data.
 
-Ask at most 4 short questions. Ask one question at a time.
+Ask at most 5 short questions. Ask one question at a time.
 
 1. "..."
 2. "..."

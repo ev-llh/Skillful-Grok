@@ -13,6 +13,20 @@ This repo has simple skills for AI tools.
 7. Add a row to the skills table in [README.md](README.md).
 8. Open a pull request.
 
+## Name rules
+
+- Use snake_case for each skill folder name and each skill `name`.
+- The rule applies to skill folders and skill names only.
+
+These names are exempt from the snake_case rule:
+
+- `skills/_template/` (the template folder)
+- `SKILL.md` (the skill file in each folder)
+- `skills/cv_employment_completeness/README.md`
+- `skills/cv_employment_completeness/CHANGELOG.md`
+
+Do not rename these files.
+
 ## Style rules (ASD-STE100)
 
 - Use short sentences.
